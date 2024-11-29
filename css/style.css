@@ -232,6 +232,7 @@ a {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: inter;
 }
 
 .category-list {
@@ -239,7 +240,7 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
 }
 
@@ -272,12 +273,14 @@ a {
 .products {
     text-align: center;
     margin-bottom: 60px;
+    padding: 16px 48px;
 }
 
 .products .wrapper div.path {
     text-align: left;
     font-size: 12px;
     margin: 40px 0 24px 0;
+    padding: 16px 48px;
 }
 
 div.productList {
@@ -380,7 +383,7 @@ div.productList div.product div.top .new {
 .viewButton {
     margin-top: 20px;
     margin-bottom: 40px;
-    padding: 18px 40px;
+    padding: 16px 48px;
     background-color: #DB4444;
     color: #f5f5f5;
     border-radius: 4px;
@@ -918,3 +921,87 @@ footer p {
 }
 
 @media all and (max-width:320px) {}
+
+@media all and (max-width: 320px) {
+    footer {
+        padding: 40px 0 20px 0; /* Reduce padding for smaller screens */
+    }
+
+    footer .wrapper {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; 
+    }
+
+    footer div.items {
+        margin-bottom: 20px;
+    }
+
+    footer div.items h1, 
+    footer div.items h2, 
+    footer div.items h3, 
+    footer div.items h6 {
+        font-size: 14px; /* Reduce font size for headings */
+    }
+
+    footer div.items a, 
+    footer div.items span {
+        font-size: 12px; 
+    }
+
+    footer div.items input {
+        font-size: 12px; 
+        padding: 10px; 
+    }
+
+    footer div.items div.social img {
+        width: 18px; 
+        height: 18px;
+    }
+
+    footer div.items div.images img {
+        width: 40px; 
+        height: auto;
+    }
+
+    footer p {
+        font-size: 10px; 
+    }
+}
+
+@media screen and (max-width: 980px) {
+    /* Category buttons layout for medium screens */
+    .categories button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Category buttons for smaller screens */
+    .categories button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .categories button {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
