@@ -17,6 +17,10 @@ html {
     font-family: 'Poppins';
 
 }
+.wrapper {
+    width: 90%;
+    margin: 0 auto; 
+}
 
 ol,
 ul {
@@ -207,6 +211,8 @@ a {
     align-items: center;
     margin-top: 20px;
     padding: 0 15px;
+    
+
 }
 
 .category-background {
@@ -251,7 +257,7 @@ a {
     align-items: center;
     width: 14%;
     padding: 40px 0; 
-    border: 1px solid #0000002a;
+    border: 1px solid #0000004D;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -802,206 +808,224 @@ footer p {
     font-weight: 600;
 }
 
-@media all and (max-width:1280px) {
-    div.productList {
-        grid-template-columns: repeat(4, 1fr);
-    }
+/* Responsive Styles: 980px to 320px */
 
-    .productDetial div.top div.left img {
-        width: 100%;
-    }
-}
-
-
-@media all and (max-width:980px) {
-    .homepage .categories .wrapper div.CateItems div.item:last-child {
-        margin-right: 20px;
-    }
-
+/* Styles for screens <= 980px */
+@media all and (max-width: 980px) {
+    /* Topbar adjustments */
     .homepage .wrapper div.topbar div.navbar {
         display: flex;
         flex-direction: column;
     }
-
     .homepage .wrapper div.topbar div.navbar a {
         margin-right: 0;
         margin-bottom: 10px;
     }
 
+    /* Categories adjustments */
+    .homepage .categories .wrapper div.CateItems div.item:last-child {
+        margin-right: 20px;
+    }
+
+    /* Product list adjustments */
     div.productList {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media all and (max-width:768px) {
+/* Styles for screens <= 768px */
+@media all and (max-width: 768px) {
+    /* Product list adjustments */
     div.productList {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Hide topbar navbar */
     .homepage .wrapper div.topbar div.navbar {
         display: none;
     }
 
+    /* Adbar text size */
     .homepage div.adbar p {
         font-size: 10px;
     }
 
-    .productDetial div.top div.left {
-        width: 100%;
-    }
-
+    /* Product details layout adjustments */
+    .productDetial div.top div.left,
     .productDetial div.top div.right {
         width: 100%;
     }
 }
 
-@media all and (max-width:640px) {
+/* Styles for screens <= 640px */
+@media all and (max-width: 640px) {
+    /* Adjust adbar height */
     .homepage div.adbar {
         height: 80px;
-
     }
 
+    /* Language selector position */
     .homepage div.adbar select.lang {
         right: 45%;
         top: 60%;
     }
 
+    /* Hide banner right section */
     .homepage .wrapper .banner .right {
         display: none;
     }
 
+    /* Expand banner left section */
     .homepage .wrapper .banner .left {
         width: 100%;
         padding: 36px;
     }
-
     .homepage .wrapper .banner .left h1 {
         font-size: 28px;
     }
 }
 
-@media all and (max-width:480px) {
+/* Styles for screens <= 480px */
+@media all and (max-width: 480px) {
+    /* Adjust adbar height */
     .homepage div.adbar {
         height: 120px;
-
     }
 
+    /* Hide search input in topbar */
     .homepage .wrapper div.topbar div.right input {
         display: none;
-
     }
 
+    /* Adjust banner text size */
     .homepage .wrapper .banner .left h1 {
         font-size: 22px;
     }
 
+    /* Adjust category item padding */
     .homepage .categories .wrapper div.CateItems div.item {
         padding: 12px;
-
     }
 
+    /* Product list adjustments */
     div.productList {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    /* Language selector position */
     .homepage div.adbar select.lang {
         right: 40%;
         top: 70%;
     }
+}
 
+/* Styles for screens <= 360px */
+@media all and (max-width: 360px) {
+    /* Adjust category item padding */
+    .homepage .categories .wrapper div.CateItems div.item {
+        padding: 8px;
+    }
+
+    /* Further reduce banner text size */
     .homepage .wrapper .banner .left h1 {
         font-size: 20px;
     }
 }
 
-@media all and (max-width:360px) {
-    .homepage .categories .wrapper div.CateItems div.item {
-        padding: 8px;
-    }
-}
-
-@media all and (max-width:320px) {}
-
+/* Styles for screens <= 320px */
 @media all and (max-width: 320px) {
+    /* Footer adjustments */
     footer {
-        padding: 40px 0 20px 0; /* Reduce padding for smaller screens */
+        padding: 40px 0 20px 0; /* Reduce padding */
     }
-
     footer .wrapper {
         flex-direction: column; /* Stack items vertically */
-        text-align: center; 
+        text-align: center;
     }
-
     footer div.items {
         margin-bottom: 20px;
     }
-
-    footer div.items h1, 
-    footer div.items h2, 
-    footer div.items h3, 
+    footer div.items h1,
+    footer div.items h2,
+    footer div.items h3,
     footer div.items h6 {
-        font-size: 14px; /* Reduce font size for headings */
+        font-size: 14px; /* Smaller headings */
     }
-
-    footer div.items a, 
+    footer div.items a,
     footer div.items span {
-        font-size: 12px; 
+        font-size: 12px;
     }
-
     footer div.items input {
-        font-size: 12px; 
-        padding: 10px; 
-    }
-
-    footer div.items div.social img {
-        width: 18px; 
-        height: 18px;
-    }
-
-    footer div.items div.images img {
-        width: 40px; 
-        height: auto;
-    }
-
-    footer p {
-        font-size: 10px; 
-    }
-}
-
-@media screen and (max-width: 980px) {
-    /* Category buttons layout for medium screens */
-    .categories button {
         font-size: 12px;
         padding: 10px;
     }
-
-    .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    footer div.items div.social img {
+        width: 18px;
+        height: 18px;
     }
-}
-
-@media screen and (max-width: 768px) {
-    /* Category buttons for smaller screens */
-    .categories button {
-        font-size: 12px;
-        padding: 8px;
+    footer div.items div.images img {
+        width: 40px;
+        height: auto;
     }
-
-    
-    .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
-@media screen and (max-width: 480px) {
-    
-    .categories button {
+    footer p {
         font-size: 10px;
-        padding: 6px;
     }
+}
+/* Default (Desktop) Layout - 4 items per row */
+div.productList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px; /* Adjust space between items */
+}
 
-    
-    .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+/* Styles for screens <= 980px (3 items per row) */
+@media all and (max-width: 980px) {
+    div.productList {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
     }
+}
+
+/* Styles for screens <= 768px (2 items per row) */
+@media all and (max-width: 768px) {
+    div.productList {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+/* Styles for screens <= 640px (1 item per row) */
+@media all and (max-width: 640px) {
+    div.productList {
+        grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    }
+}
+/* Container for category items */
+.homepage .categories .wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping when necessary */
+    justify-content: space-evenly; /* Even space between items */
+    align-items: center; /* Align vertically */
+}
+
+/* Individual category items */
+.homepage .categories .wrapper div.CateItems div.item {
+    display: flex;
+    flex-direction: column; /* Align icon and text vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content */
+    margin: 10px; /* Space between each item */
+    text-align: center; /* Center the text under the icon */
+}
+
+/* Category icon styling */
+.homepage .categories .wrapper div.CateItems div.item img {
+    width: 40px; /* Adjust icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 8px; /* Space between icon and text */
+}
+
+/* Category text styling */
+.homepage .categories .wrapper div.CateItems div.item span {
+    font-size: 14px; /* Adjust text size */
+    color: #333; /* Set text color */
+    white-space: nowrap; /* Prevent text wrapping */
 }
